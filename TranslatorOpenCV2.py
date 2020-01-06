@@ -26,7 +26,7 @@ sift = cv2.xfeatures2d.SIFT_create(nfeatures = 0,
                             		nOctaveLayers = 5,
                             		contrastThreshold = 0.04,
                             		edgeThreshold = 10,
-                            		sigma = 1.2 )
+                            		sigma = 1.6 )
 
 # find the keypoints and descriptors with SIFT
 #kp1, des1 = sift.detectAndCompute(img1,None)
@@ -40,7 +40,7 @@ flann = cv2.FlannBasedMatcher(index_params, search_params)
 
 while (True):
     check, frame = camera.read()
-    img1 = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
+    img1 = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     
     kp1, des1 = sift.detectAndCompute(img1,None)
 
@@ -54,6 +54,7 @@ while (True):
             matchesMask[i]=[1,0]
             good.append(m)
             
+    #vypis suradnic     
     dst_pt = [ kp2[m.trainIdx].pt for m in good ] 
     print(dst_pt)
     
