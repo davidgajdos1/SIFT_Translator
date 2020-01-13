@@ -39,7 +39,7 @@ Gaussian_filter bola uz tiez spomenuta, a vracia gaussov filter rozmazania a fun
 
 Funkcia Detect_Extremes vola jednu z funkcii Extrema_DetectionX kde X je cislo 1 az 3. Skusali sme rozne formy tejto funkcie kvoli optimalizacii. Pre mensie obrazky je vhodna funkcia Extrema_Detection3 a pre vacsie Extrema_Detection1 (rekurzia).
 
-<img src="result_images/default.png)" width="40%">
+![Default image](/result_images/default.png) <!-- .element height="50%" width="50%" -->
 
 
 * **TranslatorOpenCV_v3.py**
