@@ -57,5 +57,11 @@ Využité matchers pre keypointy : Brute-force matcher a FlannBasedMatcher (viď
 
 ## Problémy
 
+* **Implementácia bez využitia OpenCV**
+
+* **OpenCV Implementácia**
+
+Problémom pri tejto implementácii je párovanie Keypointov. Pri párovaní real-time videa s predlohou písmen nevie implementácia jednoznačne určiť všetky písmená. Problém je hlavne pri písmenách "O", "C", "G", ale aj pri iných písmenách.
+
 ## Záver
 
