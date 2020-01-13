@@ -36,6 +36,7 @@ FLANN_INDEX_KDTREE = 0
 index_params = dict(algorithm = FLANN_INDEX_KDTREE, trees = 5)
 search_params = dict(checks = 50)
 
+# Matcher for keypoints
 flann = cv2.FlannBasedMatcher(index_params, search_params)
 
 while (True):
