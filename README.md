@@ -45,9 +45,11 @@ Funkcia Detect_Extremes vola jednu z funkcii Extrema_DetectionX kde X je cislo 1
 
 ![GrayBlur image2](/result_images/grayblur1.png) 
 
+![Dog01](/result_images/dog01.png) 
+
 ![Diff01](/result_images/diff01.png) 
 
-![Dog01](/result_images/dog01.png) 
+
 
 
 
