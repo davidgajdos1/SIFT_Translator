@@ -69,10 +69,10 @@ Finálne parametre pre SIFT: SIFT_create(nfeatures = 0,
                                 
 Využité matchers pre keypointy : Brute-force matcher a FlannBasedMatcher (viď dokumentácia k OpenCV).
 
-Keypoint matching pri statickom obrázku
+* **Keypoint matching pri statickom obrázku**
 ![CV1](/result_images/cv1.png)
 
-Keypoint matching pre real-time obraz z webkamery
+* **Keypoint matching pre real-time obraz z webkamery**
 ![CV2](/result_images/cv2.png) 
 
 ## Problémy
