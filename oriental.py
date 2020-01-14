@@ -100,3 +100,21 @@ def assign_orientation_all(extremes_pyramid, difference_of_gaussians_pyramid, nu
             new_kps_pyramid[i][j].append(new_kps_array)
     
     return new_kps_pyramid
+
+
+
+def orientations(octaves,extremes):
+    fis_pyramid = []
+    for i in range(0,len(octaves)):
+        fi = []
+        img_array = np.asarray(octaves[i][0])
+        for extreme in extremes[i][0]:
+            ex = extreme
+            l1 = img_array[int(ex[0])+1,int(ex[1])]
+            l2 = img_array[int(ex[0])-1,int(ex[1])]
+            l3 = img_array[int(ex[0]),int(ex[1])+1]
+            l4 = img_array[int(ex[0]),int(ex[1])-1]
+            #mag =  np.sqrt(np.power(l1-l2,2) + np.power(l3-l4,2))
+            fi.append(np.arctan((l3-l4)/(l1-l2)))
+        fis_pyramid.append(fi)
+    return fis_pyramid
