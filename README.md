@@ -1,8 +1,8 @@
 # Augmented Reality SIFT Translator (Python)
 
 ## Tím
-* **Peter Ličko** - *
-* **Richard Záhumenský** - implementácia skriptov keypoint_localization.py , oriental.py *
+* **Peter Ličko** - implementácia SIFTu bez využitia OpenCV
+* **Richard Záhumenský** - implementácia skriptov keypoint_localization.py , oriental.py
 * **Dávid Gajdoš** - implementácia SIFTu s využitím OpenCV + Translate API
 
 ## Zadanie
@@ -88,6 +88,9 @@ Využité matchers pre keypointy : Brute-force matcher a FlannBasedMatcher (viď
 
 * **Implementácia bez využitia OpenCV**
 
+Problémom pri tejto implementácii je rýchlosť a práca s veľkými obrázkami, čo je problémom hlavne pre real-time video. 
+
+
 * **OpenCV Implementácia**
 
 Problémom pri tejto implementácii je párovanie Keypointov. Pri párovaní real-time videa s predlohou písmen nevie implementácia jednoznačne určiť všetky písmená. Problém je hlavne pri písmenách "O", "C", "G", ale aj pri iných písmenách.
@@ -97,6 +100,8 @@ Problémom pri tejto implementácii je párovanie Keypointov. Pri párovaní rea
 OpenCV implementácia SIFT-u je omnoho rýchlejšia ako implementácia bez využitia OpenCV, a to hlavne pri veľkých obrázkoch a pre real-time video.
 
 Výstupom zadania sú demonštračné Python skripty pre implementáciu bez využitia OpenCV pre statické obrázky ako aj s využitím OpenCV a keypoint matching pre real-time video z webkamery.
+
+
 
 
 
