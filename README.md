@@ -85,3 +85,9 @@ Problémom pri tejto implementácii je párovanie Keypointov. Pri párovaní rea
 
 ## Záver
 
+OpenCV implementácia SIFT-u je omnoho rýchlejšia ako implementácia bez využitia OpenCV, a to hlavne pri veľkých obrázkoch a pre real-time video.
+
+Výstupom zadania sú demonštračné Python skripty pre implementáciu bez využitia OpenCV pre statické obrázky ako aj s využitím OpenCV a keypoint matching pre real-time video z webkamery.
+
+
+
