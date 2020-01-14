@@ -2,7 +2,7 @@
 
 ## Tím
 * **Peter Ličko** - *
-* **Richard Záhumenský** - *
+* **Richard Záhumenský** - implementácia skriptov keypoint_localization.py , oriental.py *
 * **Dávid Gajdoš** - implementácia SIFTu s využitím OpenCV + Translate API
 
 ## Zadanie
@@ -28,6 +28,8 @@ Dalsim krokom je zavolanie funkcie Create_Octave_Pyramid, ktora nam vrati pyrami
 
 Dalej volame funkciu Detect_Extremes, ktora zisti extremy nachadzajuce sa na diferenciach, co su vlastne keypoints.
 
+Dalším krokom je volanie funkcie preprocessing_subpixels, ktorá nám opraví keypointy na presnosť subpixelov a zapíše ich do novej extremálnej pyramídy. Následne voláme funkciu orientations, ktorá nám nájde orientácie extremálnych keypointov.
+
 
 **Octaves.py**
 
@@ -38,6 +40,7 @@ Gaussian_filter bola uz tiez spomenuta, a vracia gaussov filter rozmazania a fun
 **Keypoints.py**
 
 Funkcia Detect_Extremes vola jednu z funkcii Extrema_DetectionX kde X je cislo 1 az 3. Skusali sme rozne formy tejto funkcie kvoli optimalizacii. Pre mensie obrazky je vhodna funkcia Extrema_Detection3 a pre vacsie Extrema_Detection1 (rekurzia).
+
 
 ![Default image](/result_images/default.png) 
 
@@ -50,7 +53,13 @@ Funkcia Detect_Extremes vola jednu z funkcii Extrema_DetectionX kde X je cislo 1
 ![Diff01](/result_images/diff01.png) 
 
 
+**keypoint_localization.py**
 
+Funkcia preprocessing_subpixels nachádza opravu k pôvodnému keypointu z celých pixelov na subpixeli. Používa nato funkciu localize_keypoint a vo svojom tele tiež volá filtrovanie bodov s nízkym kontrastom a body s vysokým kontrastom na okrajoch.
+
+**oriental.py**
+
+Funkcie v tomto skripte určujú orientáciu keypointov. Funkcia orientations využíva oktávy a nájdené extremálne body na zistenie správnej orientácie keypointov. 
 
 
 * **TranslatorOpenCV_v3.py**
