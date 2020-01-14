@@ -59,7 +59,8 @@ extremes_pyramid_old = copy.deepcopy(extremes_pyramid)
 extremes_pyramid = preprocessing_subpixels(difference_of_gaussians_pyramid,extremes_pyramid,np,LA)
 #extremes_pyramid_old = copy.deepcopy(extremes_pyramid)
 
-new_kps_pyramid = assign_orientation_all(extremes_pyramid, difference_of_gaussians_pyramid, num_bins=36)
+new_kps_pyramid = orientations(octaves_pyramid,extremes_pyramid)
+#assign_orientation_all(extremes_pyramid, difference_of_gaussians_pyramid, kernel_half_size, num_bins=36)
 
 'timer end'
 end = time.time()
